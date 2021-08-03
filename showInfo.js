@@ -4,7 +4,7 @@ const searchBox = document.querySelector('#search-show');
 const show = window.localStorage.getItem('showId');
 
 var request = $.ajax({
-  url: 'http://api.tvmaze.com/shows/' + show
+  url: 'https://api.tvmaze.com/shows/' + show
 })
 
 request.done(function (response) {
@@ -16,7 +16,7 @@ request.done(function (response) {
 
 // request for seasons
 var request = $.ajax({
-  url: ' http://api.tvmaze.com/shows/' + show + '/seasons'
+  url: ' https://api.tvmaze.com/shows/' + show + '/seasons'
 })
 
 request.done(function (response) {
@@ -29,7 +29,7 @@ request.done(function (response) {
 
 //request for cast
 var request = $.ajax({
-  url: 'http://api.tvmaze.com/shows/' + show + '/cast'
+  url: 'https://api.tvmaze.com/shows/' + show + '/cast'
 })
 
 request.done(function (response) {
@@ -46,7 +46,7 @@ function searchedOrSelectedShow(e) {
     e.target.value = '';
 
     const request = $.ajax({
-      url: 'http://api.tvmaze.com/search/shows?q=' + inputSearch.trim()
+      url: 'https://api.tvmaze.com/search/shows?q=' + inputSearch.trim()
     })
 
     request.done(function (response) {
@@ -60,7 +60,7 @@ function searchedOrSelectedShow(e) {
     const inputSearch = e.target.value;
 
     const request = $.ajax({
-      url: ' http://api.tvmaze.com/search/shows?q=' + inputSearch.trim()
+      url: ' https://api.tvmaze.com/search/shows?q=' + inputSearch.trim()
     })
 
     request.done(function (response) {

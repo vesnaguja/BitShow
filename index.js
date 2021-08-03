@@ -2,7 +2,7 @@ const suggestionDiv = document.querySelector('.suggestions');
 const searchBox = document.querySelector('#search-show');
 
 const request = $.ajax({
-  url: 'http://api.tvmaze.com/shows'
+  url: 'httpss://api.tvmaze.com/shows'
 })
 
 request.done(function (response) {
@@ -36,7 +36,7 @@ function searchedOrSelectedShow(e) {
     e.target.value = '';
 
     const request = $.ajax({
-      url: 'http://api.tvmaze.com/search/shows?q=' + inputSearch.trim()
+      url: 'https://api.tvmaze.com/search/shows?q=' + inputSearch.trim()
     })
 
     request.done(function (response) {
@@ -65,7 +65,7 @@ function searchedOrSelectedShow(e) {
     const inputSearch = e.target.value;
 
     const request = $.ajax({
-      url: ' http://api.tvmaze.com/search/shows?q=' + inputSearch.trim()
+      url: ' https://api.tvmaze.com/search/shows?q=' + inputSearch.trim()
     })
 
     request.done(function (response) {
