@@ -88,7 +88,7 @@ function searchedOrSelectedShow(e) {
 }
 
 function toLS(e) {
-  var show = e.target.dataset.show;
+  const show = e.target.dataset.show;
   window.localStorage.clear();
   window.localStorage.setItem('showId', show);
   window.open('./showInfo.html', "_self");
